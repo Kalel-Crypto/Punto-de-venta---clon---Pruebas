@@ -1,0 +1,42 @@
+{
+  "info": {
+    "_postman_id": "2958bb9e-e370-4007-a25b-055005719d61",
+    "name": "PuntoDeVenta",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58451300",
+    "_collection_link": "https://go.postman.co/collection/58451300-2958bb9e-e370-4007-a25b-055005719d61?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "New Request",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "//Responsividad\npm.test(\"Content-Type is present\", function () {\n    pm.response.to.have.header(\"Content-Type\");\n});\n\npm.test(\"Response contains login title\", function () {\n    pm.expect(pm.response.text()).to.include('<div class=\"titulo-login\">Punto de venta</div>');\n});\n\npm.test(\"Response time is less than 20ms\", function () {\n    pm.expect(pm.response.responseTime).to.be.below(20);\n});\n\n//Login\npm.test(\"Response contains login form\", function () {\n    pm.expect(pm.response.text()).to.include('loginForm');\n});\n\npm.test(\"Response contains username input field\", function () {\n    pm.expect(pm.response.text()).to.include('loginForm:usuario');\n});\n\npm.test(\"Response contains password input field\", function () {\n    pm.expect(pm.response.text()).to.include('loginForm:password');\n});\n\npm.test(\"Response contains role select\", function () {\n    pm.expect(pm.response.text()).to.include('loginForm:rol_input');\n});\n\n"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/vista/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "vista",
+            ""
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
