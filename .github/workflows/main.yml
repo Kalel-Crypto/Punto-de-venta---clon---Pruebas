@@ -31,6 +31,18 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: '22'
+      - name: Buscar reportes de Maven
+        if: always()
+        run: |
+          echo "=== Archivos target ==="
+          find . -type d -name target -print
+
+          echo "=== Archivos de reporte ==="
+          find . -type f \( -name "*.xml" -o -name "*.txt" \) | grep -E "surefire|test" || true
+
+          echo "=== Contenido de target ==="
+          find . -type f -path "*/target/*" | head -100
+
       - name: Generar reporte JUnit
         if: always()
         run: |
