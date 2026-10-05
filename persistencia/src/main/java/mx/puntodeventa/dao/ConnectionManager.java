@@ -7,9 +7,9 @@ import java.sql.SQLException;
 public class ConnectionManager {
 
     private static final String URL =
-            "jdbc:mysql://localhost:3306/inv_db?useSSL=false&serverTimezone=America/Tijuana&autoReconnect=true";
+            "jdbc:mysql://localhost:3306/cajita?useSSL=false&serverTimezone=America/Tijuana&autoReconnect=true";
     private static final String USER = "root";
-    private static final String PASSWORD = "Creeperisfavorite20040102030405";
+    private static final String PASSWORD = "root";
 
     public static Connection getConnection() throws SQLException {
         try {

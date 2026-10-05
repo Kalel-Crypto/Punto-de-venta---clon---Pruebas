@@ -13,6 +13,7 @@
         <module>persistencia</module>
         <module>negocio</module>
         <module>vista</module>
+        <module>Postman</module>
     </modules>
 
     <properties>
@@ -32,6 +33,12 @@
             <artifactId>mysql-connector-j</artifactId>
             <version>9.2.0</version>
             <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.12.2</version>
+            <scope>main</scope>
         </dependency>
     </dependencies>
 
