@@ -8,7 +8,7 @@ import java.util.*;
 //import static mx.puntodeventa.entity.DetalleVenta_.idProducto;
 
 public class ProductoDAO {
-    //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAW
+    //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
     public void insertar(Producto p, int cantidad) throws Exception {
         String sqlProducto = "INSERT INTO producto(nombre, precioUnitario, idProveedor) VALUES (?, ?, ?)";
         String sqlInventario = "INSERT INTO inventario(idProducto, stock) VALUES (?, ?)";
