@@ -38,7 +38,7 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>5.12.2</version>
-            <scope>main</scope>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

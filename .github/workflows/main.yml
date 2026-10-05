@@ -78,4 +78,6 @@ jobs:
         run: npm install -g newman
 
       - name: Postmin
-        run: newman run Postman/PuntoDeVenta.json
+        run: newman run Postman/PuntoDeVenta.json \
+          -r cli,junit \
+          --reporter-junit-export Postman/Reporte-JUnit/newman-results.xml

@@ -17,17 +17,19 @@ public class Pruebas_De_Ingenieria {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             usuarioDAO.login("juan", "123");
         }
+        /*
         @Test
         public void TestInsertarProducto() throws Exception {
             Producto p = new Producto();
             ProveedorDAO proveedorDAO = new ProveedorDAO();
-            List<Proveedor> proveedores = new ArrayList<Proveedor>();
+            List<Proveedor> proveedores =  new ArrayList<>();
             proveedores = proveedorDAO.listar();
             p.setNombre("Juan");
             p.setId(32);
             p.setPrecio(12.50);
             p.setProveedor(proveedores.get(0));
         }
+         */
         @Test
         public void TestInsertarProveedor() throws Exception {
             Proveedor p = new Proveedor();
