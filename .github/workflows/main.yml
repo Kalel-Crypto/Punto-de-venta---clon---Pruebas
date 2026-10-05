@@ -42,7 +42,7 @@ jobs:
       
       - name: Desplegar aplicación en Tomcat
         run: |
-          cp target/*.war tomcat/webapps/
+          cp vista/target/*.war tomcat/webapps/
       
       - name: Iniciar Tomcat
         run: |
