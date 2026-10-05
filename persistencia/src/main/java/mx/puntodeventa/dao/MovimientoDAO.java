@@ -8,7 +8,7 @@ import java.sql.*;
 import java.util.*;
 
 public class MovimientoDAO {
-
+        //Echenle ganas pues
     public void insertar(MovimientoInventario m) throws Exception {
 
         String sql = "INSERT INTO inventariomovimientos(fecha, idUsuario, idProducto, tipoMovimiento, cantidad) VALUES(?,?,?,?,?)";
