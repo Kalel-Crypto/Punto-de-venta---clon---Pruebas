@@ -100,7 +100,7 @@ public class ProveedorBean implements Serializable {
             msgWarn("El campo contacto debe cumplir con el formato establecido.");
             return;
         }
-        if(!facade.existeMarca(proveedorSeleccionado)){
+        if(facade.existeMarca(proveedorSeleccionado)){
             msgWarn("Ya hay una marca registrada con ese nombre");
             return;
         }
