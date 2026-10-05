@@ -13,11 +13,11 @@
       </jdbc-additional-properties>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="cajita@localhost" uuid="4ec7c959-1c27-47d9-84a3-52c80912ce45">
+    <data-source source="LOCAL" name="Cajita@localhost" uuid="d9c9bd4e-efd1-4a2f-bc20-4624b0f6f992">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/cajita</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/Cajita</jdbc-url>
       <jdbc-additional-properties>
         <property name="com.intellij.clouds.kubernetes.db.host.port" />
         <property name="com.intellij.clouds.kubernetes.db.enabled" value="false" />
