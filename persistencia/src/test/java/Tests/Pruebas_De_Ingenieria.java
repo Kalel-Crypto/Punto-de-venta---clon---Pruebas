@@ -32,7 +32,7 @@ public class Pruebas_De_Ingenieria {
         public void TestInsertarProveedor() throws Exception {
             Proveedor p = new Proveedor();
             p.setNombre("Juan");
-            p.setId("4");
+            p.setId(32);
             p.setMarca("pedrito");
             p.setContacto("686123912309123");
         }

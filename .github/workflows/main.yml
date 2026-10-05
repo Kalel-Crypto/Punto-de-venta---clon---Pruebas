@@ -31,6 +31,19 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: '22'
+      - name: Generar reporte JUnit
+        if: always()
+        run: |
+          mkdir -p Postman/Reporte-JUnit
+          find . -path "*/target/surefire-reports/*" -type f -exec cp {} Postman/Reporte-JUnit/ \;
+
+      - name: Subir reporte JUnit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Reporte-JUnit
+          path: Postman/Reporte-JUnit/
+
       - name: Compilar aplicación
         run: mvn clean package -DskipTests
       
