@@ -152,6 +152,7 @@ CREATE TABLE `usuario` (
 --
 -- Table structure for table `venta`
 --
+INSERT INTO `cajita`.`usuario` (`idusuario`, `nombre`, `password`, `rol`) VALUES ('1', 'juan', '123', 'ADMINISTRADOR');
 
 DROP TABLE IF EXISTS `venta`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
