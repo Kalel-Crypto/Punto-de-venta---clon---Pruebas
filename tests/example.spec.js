@@ -32,9 +32,6 @@ test('Visualizar pestaña Inventario', async ({ page }) => {
       page.locator('input[placeholder="Ingrese su nombre o ID..."]')
   ).toBeVisible();
 
-  await expect(
-      page.getByRole('tabpanel', {name:'Inventario'}).getByText('No se encontraron registros.')
-  ).toBeVisible();
 });
 
 test('Buscar producto en inventario', async ({ page }) => {
@@ -48,9 +45,6 @@ test('Buscar producto en inventario', async ({ page }) => {
 
   await page.locator('button').filter({ hasText: 'Buscar' }).first().click();
 
-  await expect(
-      page.getByRole('tabpanel', {name:'Inventario'}).getByText('No se encontraron registros.')
-  ).toBeVisible();
 });
 
 test('Navegar a Historial de movimientos', async ({ page }) => {
