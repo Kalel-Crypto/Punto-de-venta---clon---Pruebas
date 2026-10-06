@@ -16,7 +16,7 @@ jobs:
 
     services:
       mysql:
-        image: mysql:9.5
+        image: mysql:latest
         env:
           MYSQL_ROOT_PASSWORD: root
           MYSQL_DATABASE: cajita
