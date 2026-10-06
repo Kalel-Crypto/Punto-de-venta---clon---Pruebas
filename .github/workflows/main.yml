@@ -76,9 +76,7 @@ jobs:
 
       - name: Postmin
         if: always()
-        run: newman run Postman/PuntoDeVenta.json \
-          -r cli,junit \
-          --reporter-junit-export Postman/Reporte-JUnit/newman-results.xml
+        run: newman run Postman/PuntoDeVenta.json -r cli,junit --reporter-junit-export Postman/Reporte-JUnit/newman-results.xml
 
       - name: Buscar reportes de Maven
         if: always()
