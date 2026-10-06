@@ -1,8 +1,15 @@
 package Tests;
 import mx.puntodeventa.dao.ProductoDAO;
+import mx.puntodeventa.dao.ProveedorDAO;
 import  mx.puntodeventa.dao.UsuarioDAO;
+import mx.puntodeventa.entity.Producto;
 import mx.puntodeventa.entity.Proveedor;
+import mx.puntodeventa.entity.Rol;
+import mx.puntodeventa.entity.Usuario;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class PruebasDeIngenieriaTest {
         @Test
@@ -10,7 +17,7 @@ public class PruebasDeIngenieriaTest {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             usuarioDAO.login("juan", "123");
         }
-        /*
+
         @Test
         public void TestInsertarProducto() throws Exception {
             Producto p = new Producto();
@@ -22,7 +29,31 @@ public class PruebasDeIngenieriaTest {
             p.setPrecio(12.50);
             p.setProveedor(proveedores.get(0));
         }
-         */
+
+        @Test
+        public void TestRegistrarUsuario () throws Exception {
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            Usuario usuario = new Usuario();
+            usuario.setId(4);
+            usuario.setRol(Rol.ADMINISTRADOR);
+            usuario.setNombre("lolopillo");
+            usuario.setPassword("123");
+        }
+        @Test
+        public void TestModificarUsuario () throws Exception {
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            Usuario usuario = new Usuario();
+            usuario.setId(4);
+            usuario.setRol(Rol.ADMINISTRADOR);
+            usuario.setNombre("lolopija");
+            usuario.setPassword("5");
+            usuarioDAO.actualizar(usuario);
+        }
+        @Test
+        public void TestEliminarUsuario () throws Exception {
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            usuarioDAO.eliminar(4);
+        }
         @Test
         public void TestInsertarProveedor() throws Exception {
             Proveedor p = new Proveedor();
