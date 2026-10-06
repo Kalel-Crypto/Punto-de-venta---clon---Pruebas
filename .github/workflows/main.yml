@@ -102,3 +102,23 @@ jobs:
         with:
           name: Reporte-JUnit
           path: Postman/Reporte-JUnit/
+
+      - name: Instalar dependencias de Node para Playwright
+        if: always()
+        run: npm ci
+
+      - name: Instalar navegadores de Playwright
+        if: always()
+        run: npx playwright install --with-deps
+
+      - name: Ejecutar pruebas de Playwright
+        if: always()
+        run: npx playwright test
+
+      - name: Subir reporte de Playwright
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
