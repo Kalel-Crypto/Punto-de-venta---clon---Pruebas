@@ -7,7 +7,7 @@ import java.sql.*;
 import java.util.*;
 
 public class UsuarioDAO {
-
+    //Micasa
     public void insertar(Usuario u) throws Exception {
         String sql = "INSERT INTO usuario(nombre, password, rol) VALUES(?,?,?)";
 
