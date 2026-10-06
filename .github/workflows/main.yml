@@ -27,6 +27,7 @@ jobs:
           --health-interval=10s
           --health-timeout=5s
           --health-retries=3
+
     steps:
       - name: Ayudame Dios
         uses: actions/checkout@v5
@@ -37,6 +38,8 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
           cache: maven
+      - name: Crear tablas en la base de datos
+        run: mysql -h 127.0.0.1 -P 3306 -u root -proot cajita < BaseDatos.sql
 
       - name: Prueba porfavor
         run: mvn test
