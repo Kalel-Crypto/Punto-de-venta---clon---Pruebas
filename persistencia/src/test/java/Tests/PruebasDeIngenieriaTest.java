@@ -1,17 +1,10 @@
 package Tests;
 import mx.puntodeventa.dao.ProductoDAO;
-import mx.puntodeventa.dao.ProveedorDAO;
 import  mx.puntodeventa.dao.UsuarioDAO;
-import mx.puntodeventa.entity.Producto;
 import mx.puntodeventa.entity.Proveedor;
-import mx.puntodeventa.entity.Usuario;
 import org.junit.jupiter.api.Test;
 
-import javax.management.relation.Role;
-import java.util.ArrayList;
-import java.util.List;
-
-public class Pruebas_De_Ingenieria {
+public class PruebasDeIngenieriaTest {
         @Test
         public void TestLogin() throws Exception {
             UsuarioDAO usuarioDAO = new UsuarioDAO();

@@ -29,10 +29,11 @@ jobs:
         run: mvn test
       - name: Alabado sea nuestro señor
         if: always()
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v4
         with:
           node-version: '22'
       - name: Compilar aplicación
+        if: always()
         run: mvn clean package -DskipTests
       
       - name: Instalar Tomcat 11
