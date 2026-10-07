@@ -17,7 +17,19 @@ public class PruebasDeIngenieriaTest {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             usuarioDAO.login("juan", "123");
         }
-
+    @Test
+    public void TestInsertarProveedor() throws Exception {
+        Proveedor p = new Proveedor();
+        p.setNombre("Juan");
+        p.setId(32);
+        p.setMarca("pedrito");
+        p.setContacto("686123912309123");
+    }
+    @Test
+    public void TestListarProductos() throws Exception {
+        ProductoDAO productoDAO = new ProductoDAO();
+        productoDAO.listar();
+    }
         @Test
         public void TestInsertarProducto() throws Exception {
             Producto p = new Producto();
@@ -58,18 +70,5 @@ public class PruebasDeIngenieriaTest {
         public void TestEliminarUsuario () throws Exception {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             usuarioDAO.eliminar(4);
-        }
-        @Test
-        public void TestInsertarProveedor() throws Exception {
-            Proveedor p = new Proveedor();
-            p.setNombre("Juan");
-            p.setId(32);
-            p.setMarca("pedrito");
-            p.setContacto("686123912309123");
-        }
-        @Test
-        public void TestListarProductos() throws Exception {
-            ProductoDAO productoDAO = new ProductoDAO();
-            productoDAO.listar();
         }
 }
