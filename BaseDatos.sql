@@ -166,6 +166,7 @@ CREATE TABLE `venta` (
   KEY `cajaID_idx` (`idCaja`),
   CONSTRAINT `cajaID` FOREIGN KEY (`idCaja`) REFERENCES `caja` (`idcaja`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+INSERT INTO cajita.proveedor (idproveedor, nombre, contacto, marca) VALUES (1, 'chi', 'Aveces', 'Marca');
 /*!40101 SET character_set_client = @saved_cs_client */;
 SET @@SESSION.SQL_LOG_BIN = @MYSQLDUMP_TEMP_LOG_BIN;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
