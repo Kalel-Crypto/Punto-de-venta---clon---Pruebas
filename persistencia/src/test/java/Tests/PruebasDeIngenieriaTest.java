@@ -29,6 +29,11 @@ public class PruebasDeIngenieriaTest {
             p.setPrecio(12.50);
             p.setProveedor(proveedores.get(0));
         }
+        @Test
+        public void TestEliminarProducto() throws Exception {
+            ProductoDAO productoDAO = new ProductoDAO();
+            productoDAO.eliminar(32);
+        }
 
         @Test
         public void TestRegistrarUsuario () throws Exception {
