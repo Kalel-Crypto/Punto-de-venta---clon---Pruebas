@@ -6,7 +6,7 @@ import java.sql.*;
 public class CajaDAO {
 
 
-
+//gluglu
     public void abrirCaja(Caja c) throws Exception {
         String sql = "INSERT INTO caja(idUsuario) VALUES(?)";
 
